@@ -18,6 +18,7 @@ var openAIOptions = new OpenAIClientOptions()
     Endpoint = new Uri("https://models.inference.ai.azure.com")
 };
 
+
 var ghModelsClient = new OpenAIClient(credential, openAIOptions);
 var chatClient = ghModelsClient.GetChatClient("gpt-4o-mini").AsIChatClient();
 var embeddingGenerator = ghModelsClient.GetEmbeddingClient("text-embedding-3-small").AsIEmbeddingGenerator();

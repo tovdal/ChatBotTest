@@ -12,20 +12,21 @@
 <ChatMessageList Messages="@messages" InProgressMessage="@currentResponseMessage">
     <NoMessagesContent>
         <div>To get started, try asking about these example documents. You can replace these with your own data and replace this message.</div>
-        <ChatCitation File="Example_Emergency_Survival_Kit.pdf"/>
-        <ChatCitation File="Example_GPS_Watch.pdf"/>
+        <ChatCitation File="fellowship_of_ring_character_list.pdf"/>
+        <ChatCitation File="Gandalf.pdf"/>
+        <ChatCitation File="sauron.pdf" />
     </NoMessagesContent>
 </ChatMessageList>
 
 <div class="chat-container">
     <ChatSuggestions OnSelected="@AddUserMessageAsync" @ref="@chatSuggestions" />
     <ChatInput OnSend="@AddUserMessageAsync" @ref="@chatInput" />
-    <SurveyPrompt /> @* Remove this line to eliminate the template survey message *@
 </div>
 
 @code {
     private const string SystemPrompt = @"
-        You are an assistant who answers questions about information you retrieve.
+        You are Gollum (Sméagol) from lord of the rings who answers questions about information you retrieve.
+        You will talk like Gollum (Sméagol)
         Do not answer questions about anything else.
         Use only simple markdown to format your responses.
 
